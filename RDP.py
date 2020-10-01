@@ -1,6 +1,6 @@
 from enum import IntEnum
 from collections import deque
-
+from time import time
 
 class tokenType:
     def __init__(self, number=-1, value=''):
@@ -39,16 +39,19 @@ class sementicError(Exception):
 TOKENNAME = ['label', 'integer', '%ident', ',', ';']
 KEYWORD = ['label', 'integer']
 tnum = [TSymbol.tlabel, TSymbol.tinteger]
-
+cursor = 0
 
 def getc():
-    global txt
-    if txt != '':
-        symbol = txt[0]
-        txt = txt[1:]
-        return symbol
-    else:
-        return '\0'
+    global txt, cursor
+    if cursor != len(txt):
+        cursor += 1
+        return txt[cursor-1]
+    return '\0'
+
+
+def ungetc(ch):
+    global cursor
+    cursor -= 1
 
 
 def superLetter(ch):
@@ -63,10 +66,24 @@ def superLetterOrDigit(ch):
     return False
 
 
+class lexicalError(Exception):
+    def __init__(self, n=0):
+        self.n = n
+        e = 'invalid character'
+        super().__init__(e)
+
+
+class sementicError(Exception):
+    def __init__(self, n=0):
+        self.n = n
+        e = 'sementic error'
+        super().__init__(e)
+
+
+# txt = 'integer x, y, z;'
 def scanner():
-    global txt
     token_list = deque([])
-    while txt:
+    while True:
         token = tokenType()
         id = ''
         # get next symbol until no space characters apper
@@ -75,11 +92,10 @@ def scanner():
             ch = getc()
         # identifier or keyword
         if superLetter(ch):
-            while True:  # superLetterOrDigit(ch):
+            while superLetterOrDigit(ch):
                 id += ch
-                if not superLetterOrDigit(txt[0]):
-                    break
                 ch = getc()
+            ungetc(ch)
             # found, keyword exit
             if id in KEYWORD:
                 token.number = tnum[KEYWORD.index(id)]
@@ -97,7 +113,6 @@ def scanner():
         else:
             raise lexicalError()
         token_list.append(token)
-    return token_list
 
 
 def nextSymbol():
@@ -135,35 +150,91 @@ def L():
 def R():
     symbol = get_nextSymbol()
     if symbol.number == TSymbol.tsemicolon:
-        return True
+        return
     elif symbol.number == TSymbol.tcomma:
         L()
     else:
         raise sementicError()
 
 
-def parser():
+def parser_BNF():
     while token:
         D()
 
 
-def tip():
-    print('press enter if you want to exit.')
+def EBNF():
+    symbol = get_nextSymbol()
+    # 현재 token이 label 혹은 integer 일 때
+    if (symbol.number == TSymbol.tlabel) or (symbol.number == TSymbol.tinteger):
+        symbol = get_nextSymbol()   # token 하나를 가져온다
+        if symbol.number == TSymbol.tident:     # 현재 token이 ident 일 때
+            symbol = get_nextSymbol()   # token 하나를 가져온다
+            # 현재 token이 ','일 때
+            while symbol.number == TSymbol.tcomma:
+                symbol = get_nextSymbol()       # token 하나를 가져온다
+                # token이 ident 일 때 다음 token을 가져온다
+                if symbol.number == TSymbol.tident:
+                    symbol = get_nextSymbol()
+                # token이 ident가 아니라면 error
+                else:
+                    raise sementicError()
+            # 더이상 ','가 나오지 않고, 현재 token이 ';' 일 때 문법에 맞는 문장
+            if symbol.number == TSymbol.tsemicolon:
+                return
+            # ';'가 나오지 않으면 문법에 맞지 않는 문장
+            else:
+                raise sementicError()
+        else:
+            raise sementicError()
+    else:
+        raise sementicError()
+
+
+def parser_EBNF():
+    while token:
+        EBNF()
+
+
+def tip(n = 0):
+    if n == 0:
+        print("------------BNF-PARSER-----------")
+        print("<D> ::= 'label'<L> | 'integer'<L>")
+        print("<L> ::= <id><R>")
+        print("<R> ::= ';' | ','<L>")
+        print('press enter if you want to exit.\n')
+    elif n == 1:
+        print("------------EBNF-PARSER-----------")
+        print("('label'|'integer')<id>{','<id>}';'")
+        print('press enter if you want to exit.\n')
+
 
 
 if __name__ == '__main__':
-    tip()
-    print('start Compiler')
+    # txt = 'integer x, y, z; label a;' * 500000 +'\0'
+    print("BNF-Parser(0), EBNF-Parser(1)")
+    n = int(input('Choose Parser : '))
+    if n not in [0, 1]:
+        n = int(input('Choose Parser(0, 1) : '))
+    tip(n)
     while True:
-        txt = input("sentence : ")
-        if not txt:
+        txt = input("sentence : ") + '\0'
+        cursor = 0
+        if txt == '\0':
             break
         try:
-            # print('start scanner')
+            print('start scanner', end="")
             token = scanner()
-            # print('start parser')
-            parser()
+            print(' - end')
+            print('start parser', end="")
+            start = time()
+            if n == 0:
+                parser_BNF()
+            elif n == 1:
+                parser_EBNF()
+            print(' - end')
         except Exception as e:
-            print("Error -", e)
+            print("\nError -", e)
         else:
             print("Success!")
+            # print("parsing 시간: {:.4} s".format(time() - start))
+        print('')
