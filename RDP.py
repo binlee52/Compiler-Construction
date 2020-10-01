@@ -1,6 +1,6 @@
 from enum import IntEnum
 from collections import deque
-from time import time
+
 
 class tokenType:
     def __init__(self, number=-1, value=''):
@@ -39,20 +39,16 @@ class sementicError(Exception):
 TOKENNAME = ['label', 'integer', '%ident', ',', ';']
 KEYWORD = ['label', 'integer']
 tnum = [TSymbol.tlabel, TSymbol.tinteger]
-cursor = 0
+
 
 def getc():
-    global txt, cursor
-    if cursor != len(txt):
-        cursor += 1
-        return txt[cursor-1]
+    global txt
+    if txt != '':
+        symbol = txt[0]
+        txt = txt[1:]
+        return symbol
     else:
         return '\0'
-
-
-def ungetc(ch):
-    global cursor
-    cursor -= 1
 
 
 def superLetter(ch):
@@ -67,22 +63,8 @@ def superLetterOrDigit(ch):
     return False
 
 
-class lexicalError(Exception):
-    def __init__(self, n=0):
-        self.n = n
-        e = 'invalid character'
-        super().__init__(e)
-
-
-class sementicError(Exception):
-    def __init__(self, n=0):
-        self.n = n
-        e = 'sementic error'
-        super().__init__(e)
-
-
-# txt = 'integer x, y, z;'
 def scanner():
+    global txt
     token_list = deque([])
     while txt:
         token = tokenType()
@@ -93,10 +75,11 @@ def scanner():
             ch = getc()
         # identifier or keyword
         if superLetter(ch):
-            while superLetterOrDigit(ch):
+            while True:  # superLetterOrDigit(ch):
                 id += ch
+                if not superLetterOrDigit(txt[0]):
+                    break
                 ch = getc()
-            ungetc(ch)
             # found, keyword exit
             if id in KEYWORD:
                 token.number = tnum[KEYWORD.index(id)]
@@ -171,24 +154,16 @@ def tip():
 if __name__ == '__main__':
     tip()
     print('start Compiler')
-    #txt = 'integer x, y, z; label a;' * 100000
     while True:
         txt = input("sentence : ")
-        cursor = 0
         if not txt:
             break
         try:
-            print('start scanner', end="")
+            # print('start scanner')
             token = scanner()
-            print(' - end')
-            print('start parser', end="")
-            start = time()
+            # print('start parser')
             parser()
-            print(' - end')
         except Exception as e:
             print("Error -", e)
-            print("parsing 시간: {:.4} s".format(time() - start))
         else:
             print("Success!")
-            print("parsing 시간: {:.4} s".format(time() - start))
-        print('')
