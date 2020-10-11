@@ -41,6 +41,8 @@ KEYWORD = ['label', 'integer']
 tnum = [TSymbol.tlabel, TSymbol.tinteger]
 cursor = 0
 
+
+# get char from txt
 def getc():
     global txt, cursor
     if cursor != len(txt):
@@ -49,17 +51,20 @@ def getc():
     return '\0'
 
 
+# move cursor front
 def ungetc(ch):
     global cursor
     cursor -= 1
 
 
+# check char is alphabet or _
 def superLetter(ch):
     if ch.isalpha() or ch == '_':
         return True
     return False
 
 
+# check char is alphabet, _, digit
 def superLetterOrDigit(ch):
     if ch.isalnum() or ch == '_':
         return True
@@ -80,7 +85,7 @@ class sementicError(Exception):
         super().__init__(e)
 
 
-# txt = 'integer x, y, z;'
+# Scanner in Compiler
 def scanner():
     token_list = deque([])
     while True:
@@ -115,6 +120,7 @@ def scanner():
         token_list.append(token)
 
 
+# show next token
 def nextSymbol():
     global token
     if not token:
@@ -122,6 +128,7 @@ def nextSymbol():
     return token[0]
 
 
+# return token
 def get_nextSymbol():
     global token
     if not token:
@@ -157,11 +164,6 @@ def R():
         raise sementicError()
 
 
-def parser_BNF():
-    while token:
-        D()
-
-
 def EBNF():
     symbol = get_nextSymbol()
     # 현재 token이 label 혹은 integer 일 때
@@ -190,6 +192,11 @@ def EBNF():
         raise sementicError()
 
 
+def parser_BNF():
+    while token:
+        D()
+
+
 def parser_EBNF():
     while token:
         EBNF()
@@ -210,14 +217,14 @@ def tip(n = 0):
 
 
 if __name__ == '__main__':
-    # txt = 'integer x, y, z; label a;' * 500000 +'\0'
+    txt = 'integer x, y, z; label a;' * 500000 +'\0'
     print("BNF-Parser(0), EBNF-Parser(1)")
     n = int(input('Choose Parser : '))
     if n not in [0, 1]:
         n = int(input('Choose Parser(0, 1) : '))
     tip(n)
     while True:
-        txt = input("sentence : ") + '\0'
+        #txt = input("sentence : ") + '\0'
         cursor = 0
         if txt == '\0':
             break
@@ -236,5 +243,6 @@ if __name__ == '__main__':
             print("\nError -", e)
         else:
             print("Success!")
-            # print("parsing 시간: {:.4} s".format(time() - start))
+            print("parsing 시간: {:.4} s".format(time() - start))
         print('')
+        break

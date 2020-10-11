@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5385e171-1a55-4ab9-ad9c-8443a9d8f023" name="Default Changelist" comment="change RDP.py - EBNF, BNF parser">
+      <change beforePath="$PROJECT_DIR$/RDP.py" beforeDir="false" afterPath="$PROJECT_DIR$/RDP.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="JupyterTrust" id="12ef2bdf-b68c-4b82-9053-f38495fa1d3e" />
+  <component name="ProjectId" id="1iFREXczdhzk8UaTrhbEhoINSOK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="RDP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Compiler-Construction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RDP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.RDP" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5385e171-1a55-4ab9-ad9c-8443a9d8f023" name="Default Changelist" comment="" />
+      <created>1601501242813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601501242813</updated>
+      <workItem from="1601501250894" duration="2007000" />
+      <workItem from="1601506151486" duration="678000" />
+      <workItem from="1601507035113" duration="6699000" />
+      <workItem from="1601554075774" duration="1504000" />
+      <workItem from="1601863354660" duration="1174000" />
+      <workItem from="1601865500125" duration="574000" />
+      <workItem from="1601876613364" duration="12000" />
+      <workItem from="1602270570163" duration="5000" />
+    </task>
+    <task id="LOCAL-00001" summary="create RDP.py - BNF">
+      <created>1601501730654</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601501730654</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change RDP.py - delete return">
+      <created>1601501884603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601501884603</updated>
+    </task>
+    <task id="LOCAL-00003" summary="change RDP.py - faster scanner">
+      <created>1601506736086</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601506736086</updated>
+    </task>
+    <task id="LOCAL-00004" summary="change RDP.py - fastest scanner">
+      <created>1601547951477</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601547951477</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Revert &quot;change RDP.py - fastest scanner&quot;&#10;&#10;This reverts commit 6edd2724">
+      <created>1601548413016</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601548413016</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change RDP.py - EBNF, BNF parser">
+      <created>1601552714499</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601552714499</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create RDP.py - BNF" />
+    <MESSAGE value="change RDP.py - delete return" />
+    <MESSAGE value="change RDP.py - faster scanner" />
+    <MESSAGE value="change RDP.py - fastest scanner" />
+    <MESSAGE value="Revert &quot;change RDP.py - fastest scanner&quot;&#10;&#10;This reverts commit 6edd2724" />
+    <MESSAGE value="change RDP.py - EBNF, BNF parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="change RDP.py - EBNF, BNF parser" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1218" y="161" key="#Plugins" timestamp="1601866088273">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1218" y="161" key="#Plugins/0.0.2560.1040@0.0.2560.1040" timestamp="1601866088273" />
+    <state x="1374" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601501332206">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1374" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1601501332206" />
+    <state x="1306" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601863883973">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1306" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1601863883973" />
+    <state x="605" y="98" key="CommitChangelistDialog2" timestamp="1601548411346">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="605" y="98" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1601548411346" />
+    <state width="1822" height="231" key="GridCell.Tab.0.bottom" timestamp="1601555583949">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1822" height="231" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1601555583949" />
+    <state width="1822" height="231" key="GridCell.Tab.0.center" timestamp="1601555583949">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1822" height="231" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1601555583949" />
+    <state width="1822" height="231" key="GridCell.Tab.0.left" timestamp="1601555583948">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1822" height="231" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1601555583948" />
+    <state width="1822" height="231" key="GridCell.Tab.0.right" timestamp="1601555583949">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1822" height="231" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1601555583949" />
+    <state x="1421" y="168" key="SettingsEditor" timestamp="1601501311664">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1421" y="168" key="SettingsEditor/0.0.2560.1080@0.0.2560.1080" timestamp="1601501311664" />
+    <state x="872" y="273" key="Vcs.Push.Dialog.v2" timestamp="1601552721393">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="872" y="273" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1601552721393" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Compiler_Construction$RDP.coverage" NAME="RDP Coverage Results" MODIFIED="1601555248248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
