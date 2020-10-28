@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5385e171-1a55-4ab9-ad9c-8443a9d8f023" name="Default Changelist" comment="change RDP.py - EBNF, BNF parser">
-      <change beforePath="$PROJECT_DIR$/RDP.py" beforeDir="false" afterPath="$PROJECT_DIR$/RDP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Compiler-Construction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Compiler-Construction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDP.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +44,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RDP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Compiler-Construction" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,11 +82,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.RDP" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -93,6 +102,8 @@
       <workItem from="1601865500125" duration="574000" />
       <workItem from="1601876613364" duration="12000" />
       <workItem from="1602270570163" duration="5000" />
+      <workItem from="1603839675775" duration="72000" />
+      <workItem from="1603839785586" duration="498000" />
     </task>
     <task id="LOCAL-00001" summary="create RDP.py - BNF">
       <created>1601501730654</created>
@@ -168,10 +179,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1218" y="161" key="#Plugins/0.0.2560.1040@0.0.2560.1040" timestamp="1601866088273" />
-    <state x="1374" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601501332206">
+    <state x="972" y="187" width="1099" height="747" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603840055781">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1374" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1601501332206" />
+    <state x="972" y="187" width="1099" height="747" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1603840055781" />
     <state x="1306" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601863883973">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -180,6 +191,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="605" y="98" key="CommitChangelistDialog2/0.0.2560.1080@0.0.2560.1080" timestamp="1601548411346" />
+    <state x="1093" y="298" key="FileChooserDialogImpl" timestamp="1603840285129">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1093" y="298" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1603840285129" />
     <state width="1822" height="231" key="GridCell.Tab.0.bottom" timestamp="1601555583949">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
@@ -204,8 +219,9 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="872" y="273" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1601552721393" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Compiler_Construction$RDP.coverage" NAME="RDP Coverage Results" MODIFIED="1601555248248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <state x="556" y="91" key="new project wizard" timestamp="1603840288497">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="556" y="91" key="new project wizard/0.0.2560.1080@0.0.2560.1080" timestamp="1603840288497" />
   </component>
 </project>
