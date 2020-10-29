@@ -74,7 +74,6 @@ public class Parser {
         Declaration d = new Declaration(v, t);  // make Declaration(Variable, Type)
         ds.add(d);  // add in list
 
-        token = lexer.next();   // get token from lexer
         // recognize continuous variable declarations
         while (isComma()){   // if Token is ','
             token = lexer.next();   // get token from lexer
@@ -141,7 +140,7 @@ public class Parser {
     private Assignment assignment () {
         // Assignment --> Identifier = Expression ;
         Variable v = new Variable(match(TokenType.Identifier));
-        match(TokenType.Equals);
+        match(TokenType.Assign); // '=' : Assign
         Expression e = expression();
         match(TokenType.Semicolon);
         return new Assignment(v, e);  // student exercise - Done.
@@ -407,7 +406,7 @@ public class Parser {
     public static void main(String args[]) {
         Parser parser  = new Parser(new Lexer(args[0]));
         Program prog = parser.program();
-        prog.display();           // display abstract syntax tree
+        // prog.display();           // display abstract syntax tree
     } //main
 
 } // Parser
