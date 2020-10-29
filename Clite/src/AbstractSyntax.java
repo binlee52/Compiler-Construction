@@ -15,6 +15,9 @@ class Program {
     
     void display() {
 		// student exercise
+        System.out.println("Program (abstract syntax): ");
+        decpart.display();
+        body.display();
    	}
 
 }
@@ -22,7 +25,17 @@ class Program {
 class Declarations extends ArrayList<Declaration> {
     // Declarations = Declaration*
     // (a list of declarations d1, d2, ..., dn)
-
+    public void display() {
+        System.out.println("Declarations: ");
+        System.out.print("Declarations = {");
+        for (int i = 0; i < size(); i++) {
+            get(i).display();
+            if (i != size() - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("}");
+    }
 }
 
 class Declaration {
@@ -33,6 +46,10 @@ class Declaration {
     Declaration (Variable var, Type type) {
         v = var; t = type;
     } // declaration */
+
+    public void display() {
+        System.out.print("<" + v + ", " + t + ">");
+    }
 
 }
 
@@ -53,7 +70,7 @@ class Type {
 
 abstract class Statement {
     // Statement = Skip | Block | Assignment | Conditional | Loop
-
+    public void display() {};
 }
 
 class Skip extends Statement {
@@ -63,6 +80,12 @@ class Block extends Statement {
     // Block = Statement*
     //         (a Vector of members)
     public ArrayList<Statement> members = new ArrayList<Statement>();
+    public void display() {
+        System.out.println("Block: ");
+        for (int i = 0; i < members.size(); i++) {
+            members.get(i).display();
+        }
+    }
 
 }
 
@@ -76,6 +99,11 @@ class Assignment extends Statement {
         source = e;
     }
 
+    public void display() {
+        System.out.println("Assignment: ");
+        target.display();
+        source.display();
+    }
 }
 
 class Conditional extends Statement {
@@ -91,7 +119,12 @@ class Conditional extends Statement {
     Conditional (Expression t, Statement tp, Statement ep) {
         test = t; thenbranch = tp; elsebranch = ep;
     }
-    
+
+    public void display() {
+        test.display();;
+        thenbranch.display();
+        elsebranch.display();
+    }
 }
 
 class Loop extends Statement {
@@ -102,12 +135,17 @@ class Loop extends Statement {
     Loop (Expression t, Statement b) {
         test = t; body = b;
     }
-    
+
+    public void display() {
+        System.out.println("Loop: ");
+        test.display();
+        body.display();
+    }
 }
 
 abstract class Expression {
     // Expression = Variable | Value | Binary | Unary
-
+    public void display() {}
 }
 
 class Variable extends Expression {
@@ -125,6 +163,9 @@ class Variable extends Expression {
     
     public int hashCode ( ) { return id.hashCode( ); }
 
+    public void display(){
+        System.out.println("Variable: " + id);
+    }
 }
 
 abstract class Value extends Expression {
@@ -183,6 +224,10 @@ class IntValue extends Value {
         return "" + value;
     }
 
+    public void display() {
+        System.out.println("IntValue: " + value);
+    }
+
 }
 
 class BoolValue extends Value {
@@ -207,6 +252,9 @@ class BoolValue extends Value {
         return "" + value;
     }
 
+    public void display() {
+        System.out.println("BoolValue: " + value);
+    }
 }
 
 class CharValue extends Value {
@@ -226,6 +274,9 @@ class CharValue extends Value {
         return "" + value;
     }
 
+    public void display() {
+        System.out.println("CharValue: " + value);
+    }
 }
 
 class FloatValue extends Value {
@@ -245,6 +296,9 @@ class FloatValue extends Value {
         return "" + value;
     }
 
+    public void display() {
+        System.out.println("FloatValue: " + value);
+    }
 }
 
 class Binary extends Expression {
@@ -256,6 +310,12 @@ class Binary extends Expression {
         op = o; term1 = l; term2 = r;
     } // binary
 
+    public void display() {
+        System.out.println("Binary: ");
+        op.display();
+        term1.display();
+        term2.display();
+    }
 }
 
 class Unary extends Expression {
@@ -267,6 +327,11 @@ class Unary extends Expression {
         op = o; term = e;
     } // unary
 
+    public void display() {
+        System.out.println("Unary: ");
+        op.display();
+        term.display();
+    }
 }
 
 class Operator {
@@ -415,4 +480,7 @@ class Operator {
         return map (boolMap, op);
     }
 
+    public void display() {
+        System.out.println("Operator: " + val);
+    }
 }

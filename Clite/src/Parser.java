@@ -406,7 +406,8 @@ public class Parser {
     public static void main(String args[]) {
         Parser parser  = new Parser(new Lexer(args[0]));
         Program prog = parser.program();
-        // prog.display();           // display abstract syntax tree
+        System.out.println("Begin parsing... " + args[0] + "\n");
+        prog.display();           // display abstract syntax tree
     } //main
 
 } // Parser
