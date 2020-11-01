@@ -110,7 +110,7 @@ public class Parser {
         if (isSemicolon())
             s = new Skip();
         else if (isLeftBrace())
-            s = statement();
+            s = statements();
         else if (isIdentifier())
             s = assignment();
         else if (isIf())

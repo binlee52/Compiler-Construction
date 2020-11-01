@@ -1,0 +1,34 @@
+Begin parsing... programs/factorial.cpp
+
+Program (abstract syntax): 
+  Declarations: 
+    Declarations = {<n, int>, <i, int>, <f, int>}
+  Block: 
+    Assignment: 
+      Variable: n
+      IntValue: 3
+    Assignment: 
+      Variable: i
+      IntValue: 1
+    Assignment: 
+      Variable: f
+      IntValue: 1
+    Loop: 
+      Binary: 
+        Operator: <
+        Variable: i
+        Variable: n
+      Block: 
+        Assignment: 
+          Variable: i
+          Binary: 
+            Operator: +
+            Variable: i
+            IntValue: 1
+        Assignment: 
+          Variable: f
+          Binary: 
+            Operator: *
+            Variable: f
+            Variable: i
+
