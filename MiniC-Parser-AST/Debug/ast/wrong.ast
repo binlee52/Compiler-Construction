@@ -1,0 +1,9 @@
+ Nonterminal: PROGRAM
+      Nonterminal: FUNC_DEF
+           Nonterminal: FUNC_HEAD
+                Nonterminal: DCL_SPEC
+                     Nonterminal: INT_TYPE
+                Terminal: main
+                Nonterminal: FORMAL_PARA
+           Nonterminal: COMPOUND_ST
+                Nonterminal: DCL_LIST
